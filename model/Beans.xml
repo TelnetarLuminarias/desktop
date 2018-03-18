@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <bean id="luminariahistService" class="com.telnetar.desktop.services.LuminariahistService">
+       <property name="luminariahistRepository" ref="luminariaServiceRepository"/>
+   </bean>
+   <bean id="periodScheduleService" class="com.telnetar.desktop.services.PeriodScheduleService">
+       <property name="periodScheduleRepository" ref="periodScheduleRepository"/>
+   </bean>
+   <bean id="periodScheduleDetailService" class="com.telnetar.desktop.services.PeriodScheduleDetailService">
+       <property name="periodScheduleDetailRepository" ref="periodScheduleDetailRepository"/>
+   </bean>
+   <bean id="configurationService" class="com.telnetar.desktop.services.ConfigurationService">
+       <property name="configurationRepository" ref="configurationRepository"/>
+   </bean>
+   <bean id="l0HistService" class="com.telnetar.desktop.services.L0HistService">
+       <property name="l0HistRepository" ref="l0HistRepository"/>
+   </bean>
+   <bean id="roomTemperatureHistService" class="com.telnetar.desktop.services.RoomtemperaturehistService">
+       <property name="roomtemperaturehistRepository" ref="roomTemperatureHistRepository"/>
+   </bean>
+   <bean id="luminariaService" class="com.telnetar.desktop.services.LuminariaService">
+       <property name="luminariaRepository" ref="luminariaRepository"/>
+   </bean>
+   
+   <bean id="luminariaServiceRepository" class="com.telnetar.desktop.repositories.LuminariahistRepository"/>
+   <bean id="periodScheduleRepository" class="com.telnetar.desktop.repositories.PeriodScheduleRepository"/>
+   <bean id="periodScheduleDetailRepository" class="com.telnetar.desktop.repositories.PeriodScheduleDetailRepository"/>
+   <bean id="configurationRepository" class="com.telnetar.desktop.repositories.ConfigurationRepository"/>
+   <bean id="l0HistRepository" class="com.telnetar.desktop.repositories.L0HistRepository"/>
+   <bean id="roomTemperatureHistRepository" class="com.telnetar.desktop.repositories.RoomtemperaturehistRepository"/>
+   <bean id="luminariaRepository" class="com.telnetar.desktop.repositories.LuminariaRepository"/>
+
+</beans>
